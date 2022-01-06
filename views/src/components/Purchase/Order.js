@@ -36,7 +36,7 @@ const Order = () => {
         metadata,
       } = useCart();
 
-      //console.log(metadata, items, cartTotal);
+      console.log(metadata, items, cartTotal);
 
     const handleClick = async (e) => {
       e.preventDefault();
@@ -54,8 +54,8 @@ const Order = () => {
     return (
         <>
         <Paper elevation={2}>
-      <Typography variant="h4" color="secondary" align="center" gutterBottom>
-        Order summary
+      <Typography variant="h3" color="secondary" align="center" gutterBottom>
+      <Box sx={{ fontWeight: 'bold', m: 1 }}>Order Summary</Box>
       </Typography>
       <List disablePadding style={{margin: '10px'}}>
         {items.map((product) => (
@@ -70,6 +70,12 @@ const Order = () => {
           ৳ {cartTotal}
           </Typography>
         </ListItem>
+        {metadata.info && <ListItem className={classes.listItem}>
+          <ListItemText primary="Instruction" secondary={metadata.info} />
+        </ListItem>}
+        {metadata.gift && <ListItem className={classes.listItem}>
+          <ListItemText primary="Gift Box" secondary={metadata.gift} />
+        </ListItem>}
       </List>
       <Grid style={{margin: '10px'}} container spacing={2}>
         <Grid item xs={12} sm={6} lg={4}>
@@ -123,7 +129,7 @@ const Order = () => {
 
          <Box p={1} >
             <Button 
-            variant="outlined"
+            variant="contained"
             color="primary"
             size="large"
             onClick={handleClick}
@@ -134,7 +140,7 @@ const Order = () => {
 
         <Box p={1} >
             <Button 
-            variant="outlined"
+            variant="contained"
             size="large"
             color="secondary"
             component={Link}
