@@ -16,6 +16,8 @@ import Order from './components/Purchase/Order.js'
 import Confirm from './components/Purchase/Confirm.js'
 import adminPanel from './components/Admin/AdminPanel.js'
 import Footer from './components/Footer/Index.js'
+import Contact from './pages/contact'
+import About from './pages/about'
 
 const App = () => {
     return (
@@ -34,6 +36,8 @@ const App = () => {
                 <Route path="/order-confirmation" exact component={Confirm} />
                 <Route path="/payment" exact component={Payment} />
                 <Route path="/address" exact component={Address} />
+                <Route path="/contact-us" exact component={Contact} />
+                <Route path="/about-us" exact component={About} />
                 <Route path="/admin-panel" exact component={adminPanel} />
             </Switch>
             <Footer />

@@ -11,6 +11,8 @@ const Index = () => {
   <ul>
     <li><Button component={Link} to="/">Home Page</Button></li>
     <li><Button component={Link} to="/cart">Cart Page</Button></li>
+    <li><Button component={Link} to="/contact-us">Contact Us</Button></li>
+    <li><Button component={Link} to="/about-us">About Us</Button></li>
   </ul>
 </Grid>
 <Grid xs={6} lg={4}>

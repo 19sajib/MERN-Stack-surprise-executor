@@ -62,6 +62,18 @@ const Info = () => {
         <Grid item xs={12}>
           <TextField
             required
+            id="email2"
+            name="shipEmail"
+            label="Email Address"
+            placeholder="Enter your email address"
+            type="email"
+            fullWidth
+            onChange={handleChange}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            required
             id="address2"
             name="shipAddress"
             label="Street Address"
@@ -118,6 +130,19 @@ const Info = () => {
             label="Phone Number"
             placeholder="Must Be An Active Phone Number"
             type="number"
+            fullWidth
+            onChange={handleChange}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            disabled={checked=== true ? true : false}
+            required
+            id="email1"
+            name="billEmail"
+            label="Email Address"
+            placeholder="Enter Your Email Address"
+            type="email"
             fullWidth
             onChange={handleChange}
           />
